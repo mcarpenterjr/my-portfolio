@@ -1,3 +1,51 @@
+@font-face {
+    font-family: 'keepCalm';
+    src: url('../fonts/keepCalm/keepcalm-medium-webfont.woff2') format('woff2'),
+         url('../fonts/keepCalm/keepcalm-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fullscreen .indicators {
+  visibility: hidden;
+}
+.float-container {
+  position: fixed;
+  margin-bottom: 0;
+  z-index: 998;
+}
+
+.logo {
+  font-family: 'keepCalm', sans-serif;
+  color: #ffffff;
+  text-shadow: 4px 4px 8px #000000;
+}
+
 .parallax-container {
   height: 250px;
+}
+.caption .title {
+  font-family: 'keepCalm', sans-serif;
+  /*font-size: 5.0vw;*/
+  text-shadow: 4px 4px 8px #000000;
+  /* A Note */
+}
+.caption .description {
+  font-family: 'roboto', sans-serif;
+  /*font-size: 3.5vw;*/
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* FONT AWESOME HOT FIX */
+.fa-2x {
+  font-size: 2em !important;
+}
+.fa-3x {
+  font-size: 3em !important;
+}
+.fa-4x {
+  font-size: 4em !important;
+}
+.fa-5x {
+  font-size: 5em !important;
 }

@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'keepCalm';
+    src: url('../fonts/keepCalm/keepcalm-medium-webfont.woff2') format('woff2'), url('../fonts/keepCalm/keepcalm-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.fullscreen .indicators {
+    visibility: hidden;
+}
+.floating {
+    position: fixed;
+    margin-bottom: 0;
+    z-index: 998;
+}
+.llc {
+    bottom: 2%;
+    left: 2%;
+}
+.lrc {
+    bottom: 2%;
+    right: 2%
+}
+.urc {
+    bottom: 2%;
+    right: 2%
+}
+.ulc {
+    top: 2%;
+    left: 2%
+}
+.status-box {
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px #000000;
+}
+.status-box .fa-check {
+    color: #1de9b6;
+    text-shadow: 1px 1px 2px #000000;
+}
+.status {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+}
+.name {
+    font-family: 'keepCalm', sans-serif;
+    font-size: 2em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 0;
+    border-bottom: 1px solid #1a237e;
+}
+.job-title {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-style: italic;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+    margin-top: 0;
+}
+.parallax-container {
+    height: 250px;
+}
+.caption .title {
+    font-family: 'keepCalm', sans-serif;
+    font-size: 4.5em;
+    text-shadow: 4px 4px 8px #000000;
+}
+.caption .description {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* FONT AWESOME HOT FIX */
+
+.fa-2x {
+    font-size: 2em !important;
+}
+.fa-3x {
+    font-size: 3em !important;
+}
+.fa-4x {
+    font-size: 4em !important;
+}
+.fa-5x {
+    font-size: 5em !important;
+}

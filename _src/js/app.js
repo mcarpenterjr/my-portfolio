@@ -1,76 +1,34 @@
-function about() {
-  var formattedName = HTMLheaderName.replace('%data%', bio.name);
-  var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
-  var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
-  var formattedwelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
-  if (bio.skills.length > 0) {
-    for (var skill in bio.skills) {
-      var formattedSkill = HTMLskills.replace('%data%', bio.skills[skill]);
-    }
-  }
+function resume() {
+    var self = this;
 
-  var cntfoMobile = HTMLmobile.replace(/%data%/gi, bio.contacts.mobile);
-  var cntfoTwitter = HTMLtwitter.replace(/%data%/gi, bio.contacts.twitter);
-  var cntfoGithub = HTMLgithub.replace(/%data%/gi, bio.contacts.github);
-  var cntfoLocation = HTMLlocation.replace('%data%', bio.contacts.location);
-  var cntfoLinkedin = HTMLlinkedin.replace('%data%', bio.contacts.linkedin);
-  var cntfoEmail = HTMLemail.replace(/%data%/gi, bio.contacts.email);
-  var formattedContactnfo = cntfoMobile + cntfoEmail + cntfoLinkedin + cntfoGithub + cntfoTwitter + cntfoLocation;
+    self.workExp = ko.observableArray([]);
+    self.education = ko.observableArray([]);
+    self.projects = ko.observableArray([]);
+
 
 }
 
-function workExp() {
-  for (var job in work.jobs) {
-    var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
-    var formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
-    var formattedEmployerTitle = formattedEmployer + formattedTitle;
-    var formattedDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
-    if (work.jobs[job].duties.length > 0) {
-      for (var duty in work.jobs[job].duties) {
-        var formattedDuties = HTMLworkDuties.replace('%data%', work.jobs[job].duties[duty]);
-      }
-    }
+var contact = function() {
+    swal({
+            title: "Contact Mark",
+            text: '<div class="progress"><div class="indeterminate"></div></div>' +
+                '<div class="card blue-grey darken-1">' +
+                '<div class="card-content white-text">' +
+                '<p>There seems to be a problem loading our app, we will try again.</p>' +
+                '<br><a href="mailto:mark@mncarpenter.ninja" target="_blank"><span>Direct E-Mail &nbsp<i class="fa fa-envelope"></i></span></a>' +
+                '</div>' +
+                '</div>' +
+                '</div>',
+            showCancelButton: false,
+            showConfirmButton: true,
+            confirmButtonText: "Retry",
+            confirmButtonColor: "#ffb300",
+            html: true,
+            timer: 8500,
+        },
+        function() {
 
-    var formattedDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
-  }
-}
+        });
+};
 
-function education() {
-  for (var school in education.schools) {
-    var formattedSchool = HTMLschoolName.replace('%data%', education.schools[school].name);
-    var formattedSchoolUrl = formattedSchool.replace('#', education.schools[school].url);
-    var formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[school].degree);
-    var formattedSchoolDegree = formattedSchool + formattedDegree;
-    var formattedDates = HTMLschoolDates.replace('%data%', education.schools[school].dates);
-    var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[school].major);
-  }
-}
-
-for (var course in education.onlineCourses) {
-  var formattedSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[course].school);
-  var formattedTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[course].title);
-  var formattedTitle = formattedTitle.replace('#', education.onlineCourses[course].url);
-  var formattedSchoolTitle = formattedTitle + formattedSchool;
-  var formattedDates = HTMLonlineDates.replace('%data%', education.onlineCourses[course].dates);
-}
-
-function projects() {
-  for (var project in projects.projects) {
-    var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].title);
-    var formattedLinkTitle = formattedTitle.replace('#', projects.projects[project].url);
-    var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[project].dates);
-    var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
-
-    if (projects.projects[project].images.length > 0) {
-      for (var image in projects.projects[project].images) {
-        var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[project].images[image]);
-      }
-    }
-  }
-}
-
-
-$(document).ready(function() {
-  $('.parallax').parallax();
-  $('.slider').slider();
-});
+var resume = new resume();

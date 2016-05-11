@@ -1,4 +1,4 @@
-function model() {
+function mark() {
   var self = this;
 
   self.bio = {
@@ -23,7 +23,7 @@ function model() {
     ],
   };
 
-  slef.work = {
+  self.work = {
     jobs: [{
       employer: 'G. P. Tool Co.',
       title: 'CNC Machinist',
@@ -187,3 +187,4 @@ function model() {
     }],
   };
 }
+var mark= new mark();

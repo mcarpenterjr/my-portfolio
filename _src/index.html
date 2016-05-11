@@ -29,7 +29,7 @@
 	<div class="slider fullscreen">
 		<ul class="slides">
 			<li>
-				<img src="assets/img/gallery/fp/uiux.jpg">
+				<img src="img/gallery/fp/uiux.jpg">
 				<!-- random image -->
 				<div class="caption left-align">
 					<h3 class="title">UX UI Oriented Designer</h3>
@@ -37,15 +37,7 @@
 				</div>
 			</li>
 			<li>
-				<img src="assets/img/gallery/fp/mfg.jpg">
-				<!-- random image -->
-				<div class="caption left-align">
-					<h3 class="title">Production Ready</h3>
-					<h5 class="description">Clean well documented semantic code.</h5>
-				</div>
-			</li>
-			<li>
-				<img src="assets/img/gallery/fp/ruralTiltShift.jpg">
+				<img src="img/gallery/fp/ruralTiltShift.jpg">
 				<!-- random image -->
 				<div class="caption right-align">
 					<h3 class="title">Detail Oriented</h3>
@@ -53,7 +45,15 @@
 				</div>
 			</li>
 			<li>
-				<img src="assets/img/gallery/fp/snow.jpg">
+				<img src="img/gallery/fp/mfg.jpg">
+				<!-- random image -->
+				<div class="caption left-align">
+					<h3 class="title">Production Ready</h3>
+					<h5 class="description">Clean well documented semantic code.</h5>
+				</div>
+			</li>
+			<li>
+				<img src="img/gallery/fp/snow.jpg">
 				<!-- random image -->
 				<div class="caption center-align">
 					<h3 class="title">Outdoor Enthusiast</h3>
@@ -72,28 +72,36 @@
 		<h5 class="name">Mark N Carpenter Jr</h5>
 		<p class="job-title">"Frontend Web Developer"</p>
 	</div>
-	<div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+	<div class="fixed-action-btn horizontal" style="bottom: 25px; right: 14px;">
 		<a class="btn-floating btn-large indigo darken-2">
 			<i class="fa fa-bars fa-2x" aria-hidden="true"></i>
 			<span class="sr-only">Menu</span>
 		</a>
 		<ul>
-			<li><a class="btn-floating indigo lighten-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Blog">
-				<i class="fa fa-book">
+			<li>
+				<a class="btn-floating indigo lighten-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Blog">
+					<i class="fa fa-book">
 				<span class="sr-only">Blog</span>
-			</i></a></li>
-			<li><a class="btn-floating indigo lighten-2 tooltipped" data-position="top" data-delay="50" data-tooltip="About">
-				<i class="fa fa-info">
+			</i></a>
+			</li>
+			<li>
+				<a class="btn-floating indigo lighten-2 tooltipped" data-position="top" data-delay="50" data-tooltip="About">
+					<i class="fa fa-info">
 				<span class="sr-only">About</span>
-			</i></a></li>
-			<li><a class="btn-floating indigo lighten-1 tooltipped" data-position="top" data-delay="50" data-tooltip="Contact">
-				<i class="fa fa-envelope-o">
+			</i></a>
+			</li>
+			<li>
+				<a class="btn-floating indigo lighten-1 tooltipped" data-position="top" data-delay="50" data-tooltip="Contact" onclick="contact()">
+					<i class="fa fa-envelope-o">
 				<span class="sr-only">Contact</span>
-			</i></a></li>
-			<li><a class="btn-floating indigo tooltipped" data-position="top" data-delay="50" data-tooltip="Resume">
-				<i class="fa fa-file-text-o">
+			</i></a>
+			</li>
+			<li>
+				<a class="btn-floating indigo tooltipped" data-position="top" data-delay="50" data-tooltip="Resume">
+					<i class="fa fa-file-text-o">
 				<span class="sr-only">Resume</span>
-			</i></a></li>
+			</i></a>
+			</li>
 		</ul>
 	</div>
 
@@ -101,11 +109,12 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/materialize.js"></script>
 	<script src="js/sweetalert-dev.js"></script>
-	<script src="js/knockout.js"></script>
+	<script src="js/app.js"></script>
 	<script>
-	$(document).ready(function() {
-		$('.slider').slider();
-	});
+		$(document).ready(function() {
+			$('.slider').slider();
+		});
 	</script>
 </body>
+
 </html>

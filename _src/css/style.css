@@ -47,7 +47,7 @@
 }
 .name {
     font-family: 'keepCalm', sans-serif;
-    font-size: 2em;
+    font-size: 1.75em;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
     margin-bottom: 0;
@@ -66,12 +66,12 @@
 }
 .caption .title {
     font-family: 'keepCalm', sans-serif;
-    font-size: 4.5em;
+    font-size: 3.0em;
     text-shadow: 4px 4px 8px #000000;
 }
 .caption .description {
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 2.5em;
+    font-size: 1.75em;
     text-shadow: 2px 2px 4px #000000;
 }
 

@@ -51,7 +51,7 @@ function resume() {
                 "owned and operated by my father, the 'M' is the first initial of my " +
                 'name, regaurdless my experience and knowledge gained during my time ' +
                 'here have proved invaluable to my success on my career path.',
-            duties: [],
+            duties: ['Managed', 'billing', ],
         }, {
             employer: 'Mount Snow',
             title: 'Ski Ambassador',

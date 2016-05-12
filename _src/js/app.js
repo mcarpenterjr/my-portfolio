@@ -2,30 +2,31 @@ function resumeBuilder() {
     var self = this;
 
     self.workExp = ko.observableArray([]);
-    self.education = ko.observableArray([]);
+    self.schools = ko.observableArray([]);
+    self.onlineCourses = ko.observableArray([]);
     self.projects = ko.observableArray([]);
 
     var bioData = function(input) {
 
-        self.name = ko.observable(input.name);
-        self.role = ko.observable(input.role);
-        self.contacts = [];
-        self.mobile = ko.observable(input.contacts.mobile);
-        self.email = ko.observable(input.contacts.email);
-        self.github = ko.observable(input.contacts.github);
-        self.linkedin = ko.observable(input.contacts.linkedin);
-        self.twitter = ko.observable(input.contacts.twitter);
-        self.location = ko.observable(input.contacts.location);
-        self.pic = ko.observable(input.bioPic);
-        self.welcomeMessage = ko.observable(input.welcomeMessage);
-        self.skills = ko.observableArray([]);
+        var name = ko.observable(input.name);
+        var role = ko.observable(input.role);
+        var contacts = [];
+        var mobile = ko.observable(input.contacts.mobile);
+        var email = ko.observable(input.contacts.email);
+        var github = ko.observable(input.contacts.github);
+        var linkedin = ko.observable(input.contacts.linkedin);
+        var twitter = ko.observable(input.contacts.twitter);
+        var location = ko.observable(input.contacts.location);
+        var pic = ko.observable(input.bioPic);
+        var welcomeMessage = ko.observable(input.welcomeMessage);
+        var skills = ko.observableArray([]);
 
         var skillsBuild = function(input) {
-            for (var i = 0; i < input.length; i++;) {
-                self.skills.push(input[i]);
+            for (var i = 0; i < input.length; i++) {
+                skills.push(input[i]);
             }
         }
-        skillbuild(input.skills);
+        skillsBuild(input.skills);
     }
     bioData(resume.bio);
 
@@ -38,39 +39,57 @@ function resumeBuilder() {
         self.duties = ko.observableArray([]);
 
         var dutiesBuild = function(input) {
-            for (var i = 0; i < input.length; i++;) {
+            for (var i = 0; i < input.length; i++) {
                 self.duties.push(input[i]);
             }
         }
         dutiesBuild(input.duties);
     }
-    self.work = function(input) {
-        for (var i = 0; i < input.length; i++;) {
+    var work = function(input) {
+        for (var i = 0; i < input.length; i++) {
             self.workExp.push(new workData(input[i]));
         }
     }
-    work(resume.work);
+    work(resume.work.jobs);
 
     var eduData = function(input) {
-        self.employer = ko.observable(input.employer);
-        self.title = ko.observable(input.title);
-        self.dates = ko.observable(input.dates);
-        self.location = ko.observable(input.location);
-        self.description = ko.observable(input.description);
-        self.duties = ko.observableArray([]);
+        var school = function(input) {
+            self.name = ko.observable(input.name);
+            self.location = ko.observable(input.location);
+            self.degree = ko.observable(input.degree);
+            self.discipline = ko.observableArray([]);
+            self.dates = ko.observable(input.dates);
+            self.description = ko.observable(input.description);
+            self.url = ko.observable(input.url);
 
-        var dutiesBuild = function(input) {
-            for (var i = 0; i < input.length; i++;) {
-                self.duties.push(input[i]);
+            var disciplineBuild = function(input) {
+                for (var i = 0; i < input.length; i++) {
+                    self.discipline.push(input[i]);
+                }
+            }
+            disciplineBuild(input.major);
+        }
+
+        var online = function(input) {
+            self.title = ko.observable(input.title);
+            self.school = ko.observable(input.school);
+            self.dates = ko.observable(input.dates);
+            self.url = ko.observable(input.url);
+        }
+        var schoolBuild = function(input) {
+            for (var i = 0; i < input.length; i++) {
+                self.schools.push(new school(input[i]));
             }
         }
-    }
-    self.edu = function(input) {
-        for (var i = 0; i < input.length; i++;) {
-            self.education.push(new eduData(input[i]));
+        schoolBuild(input.schools);
+        var onlineBuild = function(input) {
+            for (var i = 0; i < input.length; i++) {
+                self.onlineCourses.push(new online(input[i]));
+            }
         }
+        onlineBuild(input.onlineCourses);
     }
-    edu(resume.education);
+    eduData(resume.education);
 
     var projectData = function(input) {
         self.title = ko.observable(input.title);
@@ -80,43 +99,18 @@ function resumeBuilder() {
         self.images = ko.observableArray([]);
 
         var imagesBuild = function(input) {
-            for (var i = 0; i < input.length; i++;) {
+            for (var i = 0; i < input.length; i++) {
                 self.images.push(input[i]);
             }
         }
         imagesBuild(input.images);
     }
-    self.project = function(input) {
-        for (var i = 0; i < input.length; i++;) {
+    var project = function(input) {
+        for (var i = 0; i < input.length; i++) {
             self.projects.push(new projectData(input[i]));
         }
     }
     project(resume.projects);
 };
-
-ko.applyBindings(new resumeBuilder());
-
-var contact = function() {
-    swal({
-            title: "Contact Mark",
-            text: '<div class="progress"><div class="indeterminate"></div></div>' +
-                '<div class="card blue-grey darken-1">' +
-                '<div class="card-content white-text">' +
-                '<p>There seems to be a problem loading our app, we will try again.</p>' +
-                '<br><a href="mailto:mark@mncarpenter.ninja" target="_blank"><span>Direct E-Mail &nbsp<i class="fa fa-envelope"></i></span></a>' +
-                '</div>' +
-                '</div>' +
-                '</div>',
-            showCancelButton: false,
-            showConfirmButton: true,
-            confirmButtonText: "Retry",
-            confirmButtonColor: "#ffb300",
-            html: true,
-            timer: 8500,
-        },
-        function() {
-
-        });
-};
-
-var resume = new resume();
+var data = new resumeBuilder();
+ko.applyBindings();

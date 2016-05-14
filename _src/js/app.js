@@ -14,21 +14,21 @@ function resumeBuilder() {
             },
             'bioPic': ko.observable(''),
             'welcomeMessage': ko.observable(''),
-            'skills': ko.observableArray('[]'),
+            'skills': ko.observableArray(),
         },
 
         'work': {
-            'jobs': ko.observableArray('[]'),
+            'jobs': ko.observableArray(),
         },
         'education': {
-            'schools': ko.observableArray('[]'),
-            'onlineCourses': ko.observableArray('[]'),
+            'schools': ko.observableArray(),
+            'onlineCourses': ko.observableArray(),
         },
-        'projects': ko.observableArray('[]')
+        'projects': ko.observableArray()
     };
 
 resumeFetch = function() {
-  var url = 'data/resume.js';
+  var url = 'data/resume.json';
   $.ajax({
     url: url,
     type: 'GET',

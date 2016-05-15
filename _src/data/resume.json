@@ -10,7 +10,7 @@
             "twitter": "BeardySmeardy",
             "location": "Newtown, CT"
         },
-        "bioPic": "images/mncheadshot.jpg",
+        "bioPic": "img/mncheadshot.jpg",
         "welcomeMessage": "With strong problem solving skills, the ability to adapt, and capability to quickly learn new tasks, I know I will become a vital asset to almost any team. ",
         "skills": ["HTML", "CSS", "JavaScript", "Jquery", "Bootstrap", "CMS", "Netbeans",
             "Git", "GitHub", "MySql", "iOS", "Windows", "CLI", "PhotoShop", "Fireworks",

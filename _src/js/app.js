@@ -38,16 +38,35 @@ resumeFetch = function() {
       resumeData.bio.name(result.bio.name);
       resumeData.bio.role(result.bio.role);
       resumeData.bio.contacts.mobile(result.bio.contacts.mobile);
-      resumeData.bio.contacts.email(result.bio.contacts.email);
-      resumeData.bio.contacts.github(result.bio.contacts.github);
-      resumeData.bio.contacts.linkedin(result.bio.contacts.linkedin);
-      resumeData.bio.contacts.twitter(result.bio.contacts.twitter);
+      resumeData.bio.contacts.email("mailto:marksthings24@gmail.com"+ result.bio.contacts.email + "?Subject=Your%20Resume");
+      resumeData.bio.contacts.github("https://github.com/" + result.bio.contacts.github);
+      resumeData.bio.contacts.linkedin("https://www.linkedin.com/" + result.bio.contacts.linkedin);
+      resumeData.bio.contacts.twitter("https://twitter.com" + result.bio.contacts.twitter);
       resumeData.bio.contacts.location(result.bio.contacts.location);
       resumeData.bio.bioPic(result.bio.bioPic);
       resumeData.bio.welcomeMessage(result.bio.welcomeMessage);
+      for (var skill = 0; skill < result.bio.skills.length; skill++) {
+        resumeData.bio.skills.push(result.bio.skills[skill]);
+      }
+      // Work Data
+      for (var job = 0; job < result.work.jobs.length; job++) {
+        resumeData.work.jobs.push(result.work.jobs[job]);
+      }
+      // Education Data-Schools
+      for (var school = 0; school < result.education.schools.length; school++) {
+        resumeData.education.schools.push(result.education.schools[school]);
+      }
+      // Education Data-Online Courses
+      for (var course = 0; course < result.education.onlineCourses.length; course++) {
+        resumeData.education.onlineCourses.push(result.education.onlineCourses[course]);
+      }
+
+
+      //Logs Incoming Data
+      console.log('Resume Data:', result);
     },
     error: function(result) {
-      Materialize.toast('Trouble retreiving data...', 6500);
+      Materialize.toast('Trouble Retreiving Resume Data...', 6500);
     }
   }).done(function() {
     Materialize.toast('Successfully Loaded Resume Data',6500);

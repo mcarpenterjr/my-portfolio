@@ -14,17 +14,17 @@ function resumeBuilder() {
             },
             'bioPic': ko.observable(''),
             'welcomeMessage': ko.observable(''),
-            'skills': ko.observableArray(),
+            'skills': ko.observableArray(''),
         },
 
         'work': {
-            'jobs': ko.observableArray(),
+            'jobs': ko.observableArray(''),
         },
         'education': {
-            'schools': ko.observableArray(),
-            'onlineCourses': ko.observableArray(),
+            'schools': ko.observableArray(''),
+            'onlineCourses': ko.observableArray(''),
         },
-        'projects': ko.observableArray()
+        'projects': ko.observableArray('')
     };
 
 resumeFetch = function() {
@@ -50,9 +50,10 @@ resumeFetch = function() {
       }
       // Work Data
       for (var job = 0; job < result.work.jobs.length; job++) {
-        var duties = ko.observableArray();
-        for (var duty = 0; duty < result.work.jobs.duties.length; duty++) {
-          duites.push(result.work.jobs.duties[duty]);
+        var duties = result.work.jobs[job].duties;
+        var dutiesArray = ko.observableArray();
+        for (var duty = 0; duty < duties.length; duty++) {
+          dutiesArray.push(duties[duty]);
         }
         resumeData.work.jobs.push({
         employer:  ko.observable(result.work.jobs.employer),
@@ -60,7 +61,7 @@ resumeFetch = function() {
         dates:  ko.observable(result.work.jobs.dates),
         location:  ko.observable(result.work.jobs.location),
         description:  ko.observable(result.work.jobs.description),
-        duties:  duties
+        duties:  dutiesArray
         });
       }
       // Education Data-Schools

@@ -98,8 +98,8 @@
                     <div class="row">
                         <div class="col s12 m6"  data-bind="foreach: resumeData.work.jobs">
                             <div class="card-panel grey lighten-5 z-depth-2">
-                                <h6 data-bind=""></h6>
-                                <span data-bind=""></span>
+                                <h6 data-bind="$data.employer"></h6>
+                                <span data-bind="$data.description"></span>
                             </div>
                         </div>
                     </div>

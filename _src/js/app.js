@@ -50,15 +50,33 @@ resumeFetch = function() {
       }
       // Work Data
       for (var job = 0; job < result.work.jobs.length; job++) {
-        resumeData.work.jobs.push(result.work.jobs[job]);
+        resumeData.work.jobs.push({
+        employer:  ko.observable(result.work.jobs.employer),
+        title:  ko.observable(result.work.jobs.title),
+        dates:  ko.observable(result.work.jobs.dates),
+        location:  ko.observable(result.work.jobs.location),
+        description:  ko.observable(result.work.jobs.description),
+        duties:  ko.observableArray()
+        });
       }
       // Education Data-Schools
       for (var school = 0; school < result.education.schools.length; school++) {
-        resumeData.education.schools.push(result.education.schools[school]);
+        resumeData.education.schools.push({
+        name:  ko.observable(result.education.schools.name),
+        location:  ko.observable(result.education.schools.location),
+        degree:  ko.observable(result.education.schools.degree),
+        dates:  ko.observable(result.education.schools.dates),
+        url:  ko.observable(result.education.schools.url)
+        });
       }
       // Education Data-Online Courses
       for (var course = 0; course < result.education.onlineCourses.length; course++) {
-        resumeData.education.onlineCourses.push(result.education.onlineCourses[course]);
+        resumeData.education.onlineCourses.push({
+          title:  ko.observable(result.education.schools.title),
+          school:  ko.observable(result.education.schools.school),
+          dates:  ko.observable(result.education.schools.dates),
+          url:  ko.observable(result.education.schools.url)
+        });
       }
 
 

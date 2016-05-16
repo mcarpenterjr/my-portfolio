@@ -50,13 +50,17 @@ resumeFetch = function() {
       }
       // Work Data
       for (var job = 0; job < result.work.jobs.length; job++) {
+        var duties = ko.observableArray();
+        for (var duty = 0; duty < result.work.jobs.duties.length; duty++) {
+          duites.push(result.work.jobs.duties[duty]);
+        }
         resumeData.work.jobs.push({
         employer:  ko.observable(result.work.jobs.employer),
         title:  ko.observable(result.work.jobs.title),
         dates:  ko.observable(result.work.jobs.dates),
         location:  ko.observable(result.work.jobs.location),
         description:  ko.observable(result.work.jobs.description),
-        duties:  ko.observableArray()
+        duties:  duties
         });
       }
       // Education Data-Schools

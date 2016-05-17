@@ -58,31 +58,31 @@ function resumeBuilder() {
                         dutiesArray.push(duties[duty]);
                     }
                     resumeData.work.jobs.push({
-                        employer: ko.observable(result.work.jobs.employer),
-                        title: ko.observable(result.work.jobs.title),
-                        dates: ko.observable(result.work.jobs.dates),
-                        location: ko.observable(result.work.jobs.location),
-                        description: ko.observable(result.work.jobs.description),
+                        employer: ko.observable(result.work.jobs[job].employer),
+                        title: ko.observable(result.work.jobs[job].title),
+                        dates: ko.observable(result.work.jobs[job].dates),
+                        location: ko.observable(result.work.jobs[job].location),
+                        description: ko.observable(result.work.jobs[job].description),
                         duties: dutiesArray
                     });
                 }
                 // Education Data-Schools
                 for (var school = 0; school < result.education.schools.length; school++) {
                     resumeData.education.schools.push({
-                        name: ko.observable(result.education.schools.name),
-                        location: ko.observable(result.education.schools.location),
-                        degree: ko.observable(result.education.schools.degree),
-                        dates: ko.observable(result.education.schools.dates),
-                        url: ko.observable(result.education.schools.url)
+                        name: ko.observable(result.education.schools[school].name),
+                        location: ko.observable(result.education.schools[school].location),
+                        degree: ko.observable(result.education.schools[school].degree),
+                        dates: ko.observable(result.education.schools[school].dates),
+                        url: ko.observable(result.education.schools[school].url)
                     });
                 }
                 // Education Data-Online Courses
                 for (var course = 0; course < result.education.onlineCourses.length; course++) {
                     resumeData.education.onlineCourses.push({
-                        title: ko.observable(result.education.schools.title),
-                        school: ko.observable(result.education.schools.school),
-                        dates: ko.observable(result.education.schools.dates),
-                        url: ko.observable(result.education.schools.url)
+                        title: ko.observable(result.education.onlineCourses[course].title),
+                        school: ko.observable(result.education.onlineCourses[course].school),
+                        dates: ko.observable(result.education.onlineCourses[course].dates),
+                        url: ko.observable(result.education.onlineCourses[course].url)
                     });
                 }
                 //Resets View to diplay Bindings

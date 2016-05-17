@@ -101,12 +101,36 @@
                 </div>
             </div>
             <div class="section">
+              <div class="divider"></div>
               <div class="row">
-                <ul class="collapsible" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.work.jobs">
-                    <li>
-                        <div class="collapsible-header"><span data-bind="text: $data.employer"></span></div>
+                <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.work.jobs">
+                    <li class="z-index-2">
+                        <div class="collapsible-header"><h5 data-bind="text: $data.employer"></h5></div>
                         <div class="collapsible-body">
                             <span data-bind="text: $data.description"></span>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+            </div>
+            <div class="section">
+              <div class="divider"></div>
+              <div class="row">
+                <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.schools">
+                    <li class="z-index-2">
+                        <div class="collapsible-header"><h5 data-bind="text: $data.name"></h5></div>
+                        <div class="collapsible-body">
+                            <span data-bind="text: $data.degree"></span>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="row">
+                <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.onlineCourses">
+                    <li class="z-index-2">
+                        <div class="collapsible-header"><h5 data-bind="text: $data.title"></h5></div>
+                        <div class="collapsible-body">
+                            <span data-bind="text: $data.school"></span>
                         </div>
                     </li>
                 </ul>

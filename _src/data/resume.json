@@ -6,7 +6,7 @@
             "mobile": "(203)816-5206",
             "email": "marksthings24@gmail.com",
             "github": "mcarpenterjr",
-            "linkedin": "Mark N Carpenter Jr",
+            "linkedin": "mcarpenterjr",
             "twitter": "BeardySmeardy",
             "location": "Newtown, CT"
         },
@@ -109,7 +109,7 @@
 
     "projects": {
         "projects": [{
-            "title": "Build a Personal Portfilio",
+            "title": "Build a Personal Portfolio",
             "dates": "2015",
             "description": "During my Nanodegree one of the very first projects I completed was a hand coded Personal Portfolio. It showcases not only Projects I have completed and will complete during my Nanodegree, butalso my Semantic, Clean and Responsive, HTML and CSS coding ability. Something I am particularly proud of seeing it was my first ResponsveDesign acheived with out the help of a responsive frame work.",
             "images": ["images/portfolio.PNG"],

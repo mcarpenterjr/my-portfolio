@@ -68,12 +68,18 @@ function resumeBuilder() {
                 }
                 // Education Data-Schools
                 for (var school = 0; school < result.education.schools.length; school++) {
+                  var major = result.education.schools[school].major;
+                  var majorArray = ko.observableArray();
+                  for (var discipline = 0; discipline < major.length; discipline++) {
+                    majorArray.push(major[discipline]);
+                  }
                     resumeData.education.schools.push({
                         name: ko.observable(result.education.schools[school].name),
                         location: ko.observable(result.education.schools[school].location),
                         degree: ko.observable(result.education.schools[school].degree),
                         dates: ko.observable(result.education.schools[school].dates),
-                        url: ko.observable(result.education.schools[school].url)
+                        url: ko.observable(result.education.schools[school].url),
+                        major: majorArray
                     });
                 }
                 // Education Data-Online Courses

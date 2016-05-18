@@ -73,6 +73,13 @@
             "major": ["Real Estate Law and Sales"],
             "dates": "2005",
             "url": "http://www.housatonic.edu"
+        }, {
+            "name": "Udacity",
+            "location": "Online",
+            "degree": "Frontend Web Devloper Nanodegree",
+            "major": ["Web Development"],
+            "dates": "April 2015 - March 2016",
+            "url": "http://www.udacity.com"
         }],
         "onlineCourses": [{
             "title": "Intro to HTML and CSS",
@@ -99,11 +106,6 @@
             "school": "Udacity",
             "dates": "2015",
             "url": "https://www.udacity.com/course/javascript-basics--ud804-nd"
-        }, {
-            "title": "Front-End Web Developer Nanodegree",
-            "school": "Udacity",
-            "dates": "2015-Current",
-            "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
         }]
     },
 

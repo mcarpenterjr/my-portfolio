@@ -111,22 +111,38 @@
 
     "projects": {
         "projects": [{
-            "title": "Build a Personal Portfolio",
-            "dates": "2015",
-            "description": "During my Nanodegree one of the very first projects I completed was a hand coded Personal Portfolio. It showcases not only Projects I have completed and will complete during my Nanodegree, butalso my Semantic, Clean and Responsive, HTML and CSS coding ability. Something I am particularly proud of seeing it was my first ResponsveDesign acheived with out the help of a responsive frame work.",
-            "images": ["images/portfolio.PNG"],
-            "url": "http://portfolio.mncarpenter.ninja"
+            "title": "Web Page optimization",
+            "dates": "September 2015",
+            "description": "Webpage optimization challenge, to hit a target page speed insight of at leat 90. Page to be optimized has ramdomly paralaxing images. Gulp was used to automate minification the image and code minification proccess.",
+            "images": ["img/projects/PGSpdScrn.jpg"],
+            "url": "http://mcarpenterjr.github.io/frontend-nanodegree-mobile-portfolio",
+            "gitRepo": "https://github.com/mcarpenterjr/frontend-nanodegree-mobile-portfolio"
+        }, {
+            "title": "Local Map",
+            "dates": "January 2016",
+            "description": "Udacity Front End Nano Degree Project 5.1 Neighborhood map, this is a SPA that runs on knockout.js, jQuery, and APIs from Google maps, Yelp and FourSquare. UI is powered by MaterializeCss and Font-Awesome.",
+            "images": ["img/projects/mapExample.jpg"],
+            "url": "http://mcarpenterjr.github.io/udacity-fend-p5-map",
+            "gitRepo": "https://github.com/mcarpenterjr/udacity-fend-p5-map"
+        }, {
+            "title": "Feed Reader Testing Example",
+            "dates": "March 2016",
+            "description": "Test Driven Deveolpment example, uses Jasmine to test for html elements against an RSS Feedreader. Each test was written by myself for this project.",
+            "images": ["img/projects/tddExample.jpg"],
+            "url": "http://mcarpenterjr.github.io/udacity-fend-p6-feedreader",
+            "gitRepo": "https://github.com/mcarpenterjr/udacity-fend-p6-feedreader"
         }, {
             "title": "@dotMobi AngularJs Contact Form",
             "dates": "2015",
             "description": "An AngularJs responsive contact form designed to be used on a .mobi domain. Used to collect a desired dcontacts information using phpmailer to send the information to your specified email and then dispaly or ideally through an auto responder, email your direct contact information along with a vcard file.",
-            "images": ["images/mobicontact.PNG"],
-            "url": "http://www.mncarpenter.mobi"
+            "images": ["img/projects/mobicontact.jpg"],
+            "url": "http://mcarpenterjr.github.io/datMobiContactForm",
+            "gitRepo": ""
         }, {
             "title": "CakeWalk V",
             "dates": "2010",
             "description": "While Employed at Naiad Dynamics, Inc. Naiad was contracted to install over two and a half miles of stainless tubing for onboard hydraulic equipment, into the Yacht CakeWalk. I was responsible to the lead project manager, Head Ships Engineer and various system designers. While over seeing the work of one to two other emplyees over the 8 month install period. CakeWalk at the time was the largest private ship in the previous 75 years ever constructed in North America, the project was one I will never forget.",
-            "images": ["images/cakewalk2.jpg"],
+            "images": ["img/projects/cakewalk2.jpg"],
             "url": "http://www.derecktor.com/new-construction/yachts/cakewalk/"
         }]
     }

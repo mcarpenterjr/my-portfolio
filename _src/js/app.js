@@ -91,6 +91,21 @@ function resumeBuilder() {
                         url: ko.observable(result.education.onlineCourses[course].url)
                     });
                 }
+                for (var project = 0; project < result.projects.projects.length; project++) {
+                  var images = result.projects.projects[project].images;
+                  var imageArray = ko.observableArray();
+                  for (var image = 0; image < images.length; image++) {
+                    imageArray.push(images[image]);
+                  }
+                    resumeData.projects.projects.push({
+                        title: ko.observable(result.projects.projects[project].title),
+                        dates: ko.observable(result.projects.projects[project].dates),
+                        description: ko.observable(result.projects.projects[project].description),
+                        gitRepo: ko.observable(result.projects.projects[project].gitRepo),
+                        url: ko.observable(result.projects.projects[project].url),
+                        images: imageArray
+                    });
+                }
                 //Resets View to diplay Bindings
                 resumeData.ready(true);
                 //Logs Incoming Data
@@ -105,5 +120,14 @@ function resumeBuilder() {
     };
     resumeFetch();
 }
+
+function contact() {
+  swal({
+    title: "Contact Mark",
+    text: '<a href="mailto:marksthings24@gmail.com">Mark\'s Email</a>',
+    html: true
+  });
+}
+
 var resumeBuilder = new resumeBuilder();
 ko.applyBindings(resumeBuilder);

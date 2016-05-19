@@ -76,10 +76,10 @@
                 <div class="col s12">
                     <div class="card-panel grey lighten-5 z-depth-2">
                         <div class="row valign-wrapper">
-                            <div class="col s2">
-                                <img class="circle responsive-img z-depth-2" data-bind="attr: { src: resumeData.bio.bioPic }" src="" alt="Mark N Carpenter Jr">
+                            <div class="col m2">
+                                <img class="circle responsive-img z-depth-2 hide-on-small-only" data-bind="attr: { src: resumeData.bio.bioPic }" src="" alt="Mark N Carpenter Jr">
                             </div>
-                            <div class="col s10">
+                            <div class="col s12 m10">
                                 <h3 data-bind="text: resumeData.bio.name"></h3>
                                 <h5 data-bind="text: resumeData.bio.role"></h5>
                                 <div class="divider"></div>
@@ -100,63 +100,18 @@
                     </div>
                 </div>
             </div>
-            <div class="section">
-                <div class="row">
-                    <ul data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.work.jobs">
-                        <li>
-                            <div class="col s12">
-                                <div class="card-panel indigo">
-                                    <span class="white-text"><h5 data-bind="text: $data.employer"></h5></span>
-                                    <div class="divider"></div>
-                                    <div class="row white-text">
-                                        <div class="col s4">
-                                            <h6 class="center-align" data-bind="text: $data.title"></h6>
-                                        </div>
-                                        <div class="col s4">
-                                            <h6 class="center-align" data-bind="text: $data.dates"></h6>
-                                        </div>
-                                        <div class="col s4">
-                                            <h6 class="center-align" data-bind="text: $data.location"></h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m6">
-                                <div class="card indigo lighten-1">
-                                    <div class="card-content white-text">
-                                        <span class="card-title">Position</span>
-                                        <p data-bind="text: $data.description"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col s12 m6">
-                                <div class="card indigo lighten-1">
-                                    <div class="card-content white-text">
-                                        <span class="card-title">Responsibilities</span>
-                                        <ul class="collection" data-bind="foreach: $data.duties">
-                                            <li class="collection-item indigo lighten-2" data-bind="text: $data"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section">
-                <div class="divider"></div>
-                <div class="row">
-                    <ul class="collapsible popout col s12 m6" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.schools">
-                        <li class="z-depth-2">
-                            <div class="collapsible-header indigo">
-                                <span>
-                                <h5 class="white-text" data-bind="text: $data.name"></h5>
-                              </span>
-                            </div>
-                            <div class="collapsible-body indigo lighten-1">
+        </div>
+        <div class="section">
+            <div class="row">
+                <ul data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.work.jobs">
+                    <li>
+                        <div class="col s12">
+                            <div class="card-panel indigo">
+                                <span class="white-text"><h5 data-bind="text: $data.employer"></h5></span>
+                                <div class="divider"></div>
                                 <div class="row white-text">
                                     <div class="col s4">
-                                        <h6 class="center-align" data-bind="text: $data.degree"></h6>
+                                        <h6 class="center-align" data-bind="text: $data.title"></h6>
                                     </div>
                                     <div class="col s4">
                                         <h6 class="center-align" data-bind="text: $data.dates"></h6>
@@ -165,49 +120,128 @@
                                         <h6 class="center-align" data-bind="text: $data.location"></h6>
                                     </div>
                                 </div>
-                                <div class="row white-text">
-                                    <div class="col s12 center-align">
-                                        <a data-bind="attr: { href: $data.url }" target="_blank" class="white-text">
-                                            <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
-                                            <span data-bind="text: $data.name"></span></a>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="card indigo lighten-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Position</span>
+                                    <p data-bind="text: $data.description"></p>
                                 </div>
-                                <div class="row">
-                                    <ul class="collection" data-bind="foreach: $data.major">
-                                        <li class="collection-item center-align indigo lighten-2"><span class="white-text" data-bind="text: $data"></span></li>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="card indigo lighten-1">
+                                <div class="card-content white-text">
+                                    <span class="card-title">Responsibilities</span>
+                                    <ul class="collection" data-bind="foreach: $data.duties">
+                                        <li class="collection-item indigo lighten-2" data-bind="text: $data"></li>
                                     </ul>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                    <ul class="collapsible popout col s12 m6" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.onlineCourses">
-                        <li class="z-depth-2">
-                            <div class="collapsible-header indigo">
-                                <span>
-                                <h5 class="white-text" data-bind="text: $data.title"></h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="divider"></div>
+            <div class="row">
+                <ul class="collapsible popout col s12 m6" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.schools">
+                    <li class="z-depth-2">
+                        <div class="collapsible-header indigo">
+                            <span>
+                                <h5 class="white-text" data-bind="text: $data.name"></h5>
                               </span>
-                            </div>
-                            <div class="collapsible-body indigo lighten-1">
-                                <div class="row white-text">
-                                    <div class="col s4">
-                                        <h6 class="center-align" data-bind="text: $data.school"></h6>
-                                    </div>
-                                    <div class="col s4">
-                                        <h6 class="center-align" data-bind="text: $data.dates"></h6>
-                                    </div>
-                                    <div class="col s4">
-                                        <a data-bind="attr: { href: $data.url }" target="_blank" class="white-text">
-                                            <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
-                                            <span data-bind="text: $data.title"></span></a>
-                                    </div>
+                        </div>
+                        <div class="collapsible-body indigo lighten-1">
+                            <div class="row white-text">
+                                <div class="col s4">
+                                    <h6 class="center-align" data-bind="text: $data.degree"></h6>
+                                </div>
+                                <div class="col s4">
+                                    <h6 class="center-align" data-bind="text: $data.dates"></h6>
+                                </div>
+                                <div class="col s4">
+                                    <h6 class="center-align" data-bind="text: $data.location"></h6>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="row white-text">
+                                <div class="col s12 center-align">
+                                    <a data-bind="attr: { href: $data.url }" target="_blank" class="white-text">
+                                        <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
+                                        <span data-bind="text: $data.name"></span></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <ul class="collection" data-bind="foreach: $data.major">
+                                    <li class="collection-item center-align indigo lighten-2"><span class="white-text" data-bind="text: $data"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="collapsible popout col s12 m6" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.onlineCourses">
+                    <li class="z-depth-2">
+                        <div class="collapsible-header indigo">
+                            <span>
+                                <h5 class="white-text" data-bind="text: $data.title"></h5>
+                              </span>
+                        </div>
+                        <div class="collapsible-body indigo lighten-1">
+                            <div class="row white-text">
+                                <div class="col s4">
+                                    <h6 class="center-align" data-bind="text: $data.school"></h6>
+                                </div>
+                                <div class="col s4">
+                                    <h6 class="center-align" data-bind="text: $data.dates"></h6>
+                                </div>
+                                <div class="col s4">
+                                    <a data-bind="attr: { href: $data.url }" target="_blank" class="white-text">
+                                        <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
+                                        <span data-bind="text: $data.title"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+                <ul data-bind="foreach: resumeData.projects.projects">
+                    <li class="col s12 m4">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" data-bind="attr: { src: $data.images()[0] }">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4" data-bind="text: $data.title"><i class="material-icons right">more_vert</i></span></br>
+                                <span class="left"><a data-bind="attr: { href: $data.url }" target="_blank">Live Version</a></span>
+                                <span class="right"><a data-bind="visible: $data.gitRepo.length > 0, attr: { href: $data.gitRepo }" target="_blank"><i class="fa fa-github"></i> Repository</a></span>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4" data-bind="text: $data.title"><i class="material-icons right">close</i></span>
+                                <p data-bind="text: $data.description"></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
+    <footer class="page-footer indigo">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Copyright Mark N Carpenter Jr
+            </div>
+        </div>
+    </footer>
 
     <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>

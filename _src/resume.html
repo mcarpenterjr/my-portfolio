@@ -218,7 +218,7 @@
                             <div class="card-content">
                                 <span class="card-title activator grey-text text-darken-4" data-bind="text: $data.title"><i class="material-icons right">more_vert</i></span></br>
                                 <span class="left"><a data-bind="attr: { href: $data.url }" target="_blank">Live Version</a></span>
-                                <span class="right"><a data-bind="visible: $data.gitRepo.length > 0, attr: { href: $data.gitRepo }" target="_blank"><i class="fa fa-github"></i> Repository</a></span>
+                                <span class="right"><a data-bind="visible: $data.gitRepo, attr: { href: $data.gitRepo }" target="_blank"><i class="fa fa-github"></i> Repository</a></span>
                             </div>
                             <div class="card-reveal">
                                 <span class="card-title grey-text text-darken-4" data-bind="text: $data.title"><i class="material-icons right">close</i></span>

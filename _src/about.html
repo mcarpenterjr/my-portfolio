@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mark N Carpenter Jr (Freelance Frontend Ninja)">
+
+    <title>Mark N Carpenter Jr, Frontend Developer</title>
+
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.6.2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icons -->
+
+    <!-- Fonts -->
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Oswald'>
+
+    <!-- Scripts -->
+
+</head>
+
+<body class="grey lighten-4">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper indigo z-depth-2">
+                <a href="#!" class="brand-logo">Personal Resume</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse">
+                    <i class="fa fa-bars fa-fw"></i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.email }" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.mobile }" target="_blank"><i class="fa fa-phone-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.github }" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.linkedin }" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.twitter }" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.email }" target="_blank"><i class="fa fa-envelope fa-2x"></i> Email</a>
+                    </li>
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.mobile }" target="_blank"><i class="fa fa-phone-square fa-2x"></i> Phone</a>
+                    </li>
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.github }" target="_blank"><i class="fa fa-github fa-2x"></i> github</a>
+                    </li>
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.linkedin }" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i> LinkedIn</a>
+                    </li>
+                    <li>
+                        <a data-bind="attr: { href: resumeData.bio.contacts.twitter }" target="_blank"><i class="fa fa-twitter-square fa-2x"></i> Twitter</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container grey lighten-4">
+        <div class="section">
+            <div class="row">
+                <div class="col s12">
+                    git
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+              <div class="card-panel indigo">
+                <span class="white-text"><h5>Mark</h5></span>
+              </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="divider"></div>
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card-panel indigo">
+                  <span class="white-text"><h5>Education</h5></span>
+                </div>
+
+              </div>
+              <div class="col s12 m6">
+                <div class="card-panel indigo">
+                  <span class="white-text"><h5>Dedicated Courses</h5></span>
+                </div>
+
+              </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="row">
+              <div class="card-panel indigo">
+                <span class="white-text"><h5>Personal Projects</h5></span>
+              </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer indigo">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Copyright Mark N Carpenter Jr
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/sweetalert-dev.js"></script>
+    <script src="js/knockout.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.button-collapse').sideNav();
+            $('.collapsible').collapsible();
+        });
+    </script>
+</body>
+</html>

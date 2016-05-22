@@ -147,7 +147,11 @@
         <div class="section">
             <div class="divider"></div>
             <div class="row">
-                <ul class="collapsible popout col s12 m6" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.schools">
+              <div class="col s12 m6">
+                <div class="card-panel indigo">
+                  <span class="white-text"><h5>Education</h5></span>
+                </div>
+                <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.schools">
                     <li class="z-depth-2">
                         <div class="collapsible-header indigo">
                             <span>
@@ -181,7 +185,12 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="collapsible popout col s12 m6" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.onlineCourses">
+              </div>
+              <div class="col s12 m6">
+                <div class="card-panel indigo">
+                  <span class="white-text"><h5>Dedicated Courses</h5></span>
+                </div>
+                <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.onlineCourses">
                     <li class="z-depth-2">
                         <div class="collapsible-header indigo">
                             <span>
@@ -205,10 +214,14 @@
                         </div>
                     </li>
                 </ul>
+              </div>
             </div>
         </div>
         <div class="section">
             <div class="row">
+              <div class="card-panel indigo">
+                <span class="white-text"><h5>Personal Projects</h5></span>
+              </div>
                 <ul data-bind="foreach: resumeData.projects.projects">
                     <li class="col s12 m4">
                         <div class="card">

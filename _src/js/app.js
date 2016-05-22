@@ -29,8 +29,8 @@ function resumeBuilder() {
         'ready': ko.observable(false)
     };
 
-    resumeFetch = function() {
-        var url = 'data/resume.json';
+    resumeFetch = function(fileName) {
+        var url = 'data/' + fileName;
         $.ajax({
             url: url,
             type: 'GET',
@@ -118,7 +118,25 @@ function resumeBuilder() {
             Materialize.toast('Successfully Loaded Resume Data', 6500);
         });
     };
-    resumeFetch();
+
+    aboutFetch = function(fileName) {
+        var url = 'data/' + fileName;
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'JSON',
+            success: function(result) {
+                var data = result;
+
+                console.log('About Data:', result);
+            },
+            error: function(result) {
+                Materialize.toast('Trouble Retreiving Information About Mark...', 6500);
+            }
+        }).done(function() {
+            Materialize.toast('Successfully Loaded Mark\'s Information.', 6500);
+        });
+    };
 }
 
 function contact() {

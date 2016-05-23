@@ -1,240 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Mark N Carpenter Jr (Freelance Frontend Ninja)">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Mark N Carpenter Jr (Freelance Frontend Ninja)">
 
-    <title>Mark N Carpenter Jr, Frontend Developer</title>
+        <title>Mark N Carpenter Jr, Frontend Developer</title>
 
-    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+        <link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="css/materialize.css">
-    <link rel="stylesheet" href="css/sweetalert.css">
-    <link rel="stylesheet" href="fonts/font-awesome-4.6.2/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Icons -->
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="css/materialize.css">
+        <link rel="stylesheet" href="css/sweetalert.css">
+        <link rel="stylesheet" href="fonts/font-awesome-4.6.2/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Icons -->
 
-    <!-- Fonts -->
-    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Oswald'>
+        <!-- Fonts -->
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Oswald'>
 
-    <!-- Scripts -->
+        <!-- Scripts -->
 
-</head>
+    </head>
 
-<body class="grey lighten-4">
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper indigo z-depth-2">
-                <a href="#!" class="brand-logo">Personal Resume</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse">
-                    <i class="fa fa-bars fa-fw"></i>
-                </a>
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.email }" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.mobile }" target="_blank"><i class="fa fa-phone-square fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.github }" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.linkedin }" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.twitter }" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
-                    </li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.email }" target="_blank"><i class="fa fa-envelope fa-2x"></i> Email</a>
-                    </li>
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.mobile }" target="_blank"><i class="fa fa-phone-square fa-2x"></i> Phone</a>
-                    </li>
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.github }" target="_blank"><i class="fa fa-github fa-2x"></i> github</a>
-                    </li>
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.linkedin }" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i> LinkedIn</a>
-                    </li>
-                    <li>
-                        <a data-bind="attr: { href: resumeData.bio.contacts.twitter }" target="_blank"><i class="fa fa-twitter-square fa-2x"></i> Twitter</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <div class="container grey lighten-4">
-        <div class="section">
-            <div class="row">
-                <div class="col s12">
-                    <div class="card-panel grey lighten-5 z-depth-2">
-                        <div class="row valign-wrapper">
-                            <div class="col m2">
-                                <img class="circle responsive-img z-depth-2 hide-on-small-only" data-bind="attr: { src: resumeData.bio.bioPic }" src="" alt="Mark N Carpenter Jr">
-                            </div>
-                            <div class="col s12 m10">
-                                <h3 data-bind="text: resumeData.bio.name"></h3>
-                                <h5 data-bind="text: resumeData.bio.role"></h5>
-                                <div class="divider"></div>
-                                <p data-bind="text: resumeData.bio.welcomeMessage"></p>
+    <body class="grey lighten-4">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper indigo z-depth-2">
+                    <a href="#!" class="brand-logo">Personal Resume</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse">
+                        <i class="fa fa-bars fa-fw"></i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.email }" target="_blank">
+                                <i class="fa fa-envelope fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.mobile }" target="_blank">
+                                <i class="fa fa-phone-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.github }" target="_blank">
+                                <i class="fa fa-github fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.linkedin }" target="_blank">
+                                <i class="fa fa-linkedin-square fa-2x"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.twitter }" target="_blank">
+                                <i class="fa fa-twitter-square fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.email }" target="_blank">
+                                <i class="fa fa-envelope fa-2x"></i>
+                                Email</a>
+                        </li>
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.mobile }" target="_blank">
+                                <i class="fa fa-phone-square fa-2x"></i>
+                                Phone</a>
+                        </li>
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.github }" target="_blank">
+                                <i class="fa fa-github fa-2x"></i>
+                                github</a>
+                        </li>
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.linkedin }" target="_blank">
+                                <i class="fa fa-linkedin-square fa-2x"></i>
+                                LinkedIn</a>
+                        </li>
+                        <li>
+                            <a data-bind="attr: { href: resume.data.bio.contacts.twitter }" target="_blank">
+                                <i class="fa fa-twitter-square fa-2x"></i>
+                                Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container grey lighten-4">
+            <div class="section">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel grey lighten-5 z-depth-2">
+                            <div class="row valign-wrapper">
+                                <div class="col m2">
+                                    <img class="circle responsive-img z-depth-2 hide-on-small-only" data-bind="attr: { src: resume.data.bio.bioPic }" src="" alt="Mark N Carpenter Jr">
+                                </div>
+                                <div class="col s12 m10">
+                                    <h3 data-bind="text: resume.data.bio.name"></h3>
+                                    <h5 data-bind="text: resume.data.bio.role"></h5>
+                                    <div class="divider"></div>
+                                    <p data-bind="text: resume.data.bio.welcomeMessage"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="card-panel blue-grey lighten-4 z-depth-2">
-                        <h5>Skills</h5>
-                        <div class="divider"></div>
-                        <h6 data-bind="foreach: resumeData.bio.skills">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel blue-grey lighten-4 z-depth-2">
+                            <h5>Skills</h5>
+                            <div class="divider"></div>
+                            <h6 data-bind="foreach: resume.data.bio.skills">
                                 <span data-bind="text: $data"></span>,
                             </h6>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section">
-            <div class="row">
-                <ul data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.work.jobs">
-                    <li>
-                        <div class="col s12">
-                            <div class="card-panel indigo">
-                                <span class="white-text"><h5 data-bind="text: $data.employer"></h5></span>
-                                <div class="divider"></div>
-                                <div class="row white-text">
-                                    <div class="col s4">
-                                        <h6 class="center-align" data-bind="text: $data.title"></h6>
-                                    </div>
-                                    <div class="col s4">
-                                        <h6 class="center-align" data-bind="text: $data.dates"></h6>
-                                    </div>
-                                    <div class="col s4">
-                                        <h6 class="center-align" data-bind="text: $data.location"></h6>
+            <div class="section">
+                <div class="row">
+                    <ul data-collapsible="accordion" data-bind="visible: resume.data.ready, foreach: resume.data.work.jobs">
+                        <li>
+                            <div class="col s12">
+                                <div class="card-panel indigo">
+                                    <span class="white-text">
+                                        <h5 data-bind="text: $data.employer"></h5>
+                                    </span>
+                                    <div class="divider"></div>
+                                    <div class="row white-text">
+                                        <div class="col s4">
+                                            <h6 class="center-align" data-bind="text: $data.title"></h6>
+                                        </div>
+                                        <div class="col s4">
+                                            <h6 class="center-align" data-bind="text: $data.dates"></h6>
+                                        </div>
+                                        <div class="col s4">
+                                            <h6 class="center-align" data-bind="text: $data.location"></h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col s12 m6">
-                            <div class="card indigo lighten-1">
-                                <div class="card-content white-text">
-                                    <span class="card-title">Position</span>
-                                    <p data-bind="text: $data.description"></p>
+                            <div class="col s12 m6">
+                                <div class="card indigo lighten-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">Position</span>
+                                        <p data-bind="text: $data.description"></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col s12 m6">
-                            <div class="card indigo lighten-1">
-                                <div class="card-content white-text">
-                                    <span class="card-title">Responsibilities</span>
-                                    <ul class="collection" data-bind="foreach: $data.duties">
-                                        <li class="collection-item indigo lighten-2" data-bind="text: $data"></li>
-                                    </ul>
+                            <div class="col s12 m6">
+                                <div class="card indigo lighten-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title">Responsibilities</span>
+                                        <ul class="collection" data-bind="foreach: $data.duties">
+                                            <li class="collection-item indigo lighten-2" data-bind="text: $data"></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="section">
-            <div class="divider"></div>
-            <div class="row">
-              <div class="col s12 m6">
-                <div class="card-panel indigo">
-                  <span class="white-text"><h5>Education</h5></span>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.schools">
-                    <li class="z-depth-2">
-                        <div class="collapsible-header indigo">
-                            <span>
-                                <h5 class="white-text" data-bind="text: $data.name"></h5>
-                              </span>
-                        </div>
-                        <div class="collapsible-body indigo lighten-1">
-                            <div class="row white-text">
-                                <div class="col s4">
-                                    <h6 class="center-align" data-bind="text: $data.degree"></h6>
-                                </div>
-                                <div class="col s4">
-                                    <h6 class="center-align" data-bind="text: $data.dates"></h6>
-                                </div>
-                                <div class="col s4">
-                                    <h6 class="center-align" data-bind="text: $data.location"></h6>
-                                </div>
-                            </div>
-                            <div class="row white-text">
-                                <div class="col s12 center-align">
-                                    <a data-bind="attr: { href: $data.url }" target="_blank" class="white-text">
-                                        <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
-                                        <span data-bind="text: $data.name"></span></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <ul class="collection" data-bind="foreach: $data.major">
-                                    <li class="collection-item center-align indigo lighten-2"><span class="white-text" data-bind="text: $data"></span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-              </div>
-              <div class="col s12 m6">
-                <div class="card-panel indigo">
-                  <span class="white-text"><h5>Dedicated Courses</h5></span>
-                </div>
-                <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resumeData.ready, foreach: resumeData.education.onlineCourses">
-                    <li class="z-depth-2">
-                        <div class="collapsible-header indigo">
-                            <span>
-                                <h5 class="white-text" data-bind="text: $data.title"></h5>
-                              </span>
-                        </div>
-                        <div class="collapsible-body indigo lighten-1">
-                            <div class="row white-text">
-                                <div class="col s4">
-                                    <h6 class="center-align" data-bind="text: $data.school"></h6>
-                                </div>
-                                <div class="col s4">
-                                    <h6 class="center-align" data-bind="text: $data.dates"></h6>
-                                </div>
-                                <div class="col s4">
-                                    <a data-bind="attr: { href: $data.url }" target="_blank" class="white-text">
-                                        <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
-                                        <span data-bind="text: $data.title"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-              </div>
             </div>
-        </div>
-        <div class="section">
-            <div class="row">
-              <div class="card-panel indigo">
-                <span class="white-text"><h5>Personal Projects</h5></span>
-              </div>
-                <ul data-bind="foreach: resumeData.projects.projects">
-                    <li class="col s12 m4">
-                        <div class="card">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" data-bind="attr: { src: $data.images()[0] }">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4" data-bind="text: $data.title"><i class="material-icons right">more_vert</i></span></br>
-                                <span class="left"><a data-bind="attr: { href: $data.url }" target="_blank">Live Version</a></span>
-                                <span class="right"><a data-bind="visible: $data.gitRepo, attr: { href: $data.gitRepo }" target="_blank"><i class="fa fa-github"></i> Repository</a></span>
+            <div class="section">
+                <div class="divider"></div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card-panel indigo">
+                            <span class="white-text">
+                                <h5>Education</h5>
+                            </span>
+                        </div>
+                        <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resume.data.ready, foreach: resume.data.education.schools">
+                            <li class="z-depth-2">
+                                <div class="collapsible-header indigo">
+                                    <span>
+                                        <h5 class="white-text" data-bind="text: $data.name"></h5>
+                                    </span>
+                                </div>
+                                <div class="collapsible-body indigo lighten-1">
+                                    <div class="row white-text">
+                                        <div class="col s4">
+                                            <h6 class="center-align" data-bind="text: $data.degree"></h6>
+                                        </div>
+                                        <div class="col s4">
+                                            <h6 class="center-align" data-bind="text: $data.dates"></h6>
+                                        </div>
+                                        <div class="col s4">
+                                            <h6 class="center-align" data-bind="text: $data.location"></h6>
+                                        </div>
+                                    </div>
+                                    <div class="row white-text">
+                                        <div class="col s12 center-align">
+                                            <a data-bind="attr: { href: $data.url }" target="_blank" class="white-text">
+                                                <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
+                                                <span data-bind="text: $data.name"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <ul class="collection" data-bind="foreach: $data.major">
+                                            <li class="collection-item center-align indigo lighten-2">
+                                                <span class="white-text" data-bind="text: $data"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card-panel indigo">
+                            <span class="white-text">
+                                <h5>Dedicated Courses</h5>
+                            </span>
+                        </div>
+                        <ul class="collapsible popout" data-collapsible="accordion" data-bind="visible: resume.data.ready, foreach: resume.data.education.onlineCourses">
+                            <li class="z-depth-2">
+                                <div class="collapsible-header indigo">
+                                    <span>
+                                        <h5 class="white-text" data-bind="text: $data.title"></h5>
+                                    </span>
+                                </div>
+                                <div class="collapsible-body indigo lighten-1">
+                                    <div class="row white-text">
+                                        <div class="col s4">
+                                            <h6 class="center-align" data-bind="text: $data.school"></h6>
+                                        </div>
+                                        <div class="col s4">
+                                            <h6 class="center-align" data-bind="text: $data.dates"></h6>
+                                        </div>
+                                        <div class="col s4">
+                                            <a data-bind="attr: { href: $data.url }" target="_blank" class="white-text">
+                                                <i class="fa fa-graduation-cap fa-fw" aria-hidden="true"></i>
+                                                <span data-bind="text: $data.title"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <div class="card-panel indigo">
+                        <span class="white-text">
+                            <h5>Personal Projects</h5>
+                        </span>
+                    </div>
+                    <ul data-bind="foreach: resume.data.projects.projects">
+                        <li class="col s12 m4">
+                            <div class="card">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" data-bind="attr: { src: $data.images()[0] }">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4" data-bind="text: $data.title">
+                                        <i class="material-icons right">more_vert</i>
+                                    </span>
+                                </br>
+                                <span class="left">
+                                    <a data-bind="attr: { href: $data.url }" target="_blank">Live Version</a>
+                                </span>
+                                <span class="right">
+                                    <a data-bind="visible: $data.gitRepo, attr: { href: $data.gitRepo }" target="_blank">
+                                        <i class="fa fa-github"></i>
+                                        Repository</a>
+                                </span>
                             </div>
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4" data-bind="text: $data.title"><i class="material-icons right">close</i></span>
+                                <span class="card-title grey-text text-darken-4" data-bind="text: $data.title">
+                                    <i class="material-icons right">close</i>
+                                </span>
                                 <p data-bind="text: $data.description"></p>
                             </div>
                         </div>
@@ -245,9 +288,7 @@
     </div>
     <footer class="page-footer indigo">
         <div class="container">
-            <div class="row">
-
-            </div>
+            <div class="row"></div>
         </div>
         <div class="footer-copyright">
             <div class="container">
@@ -261,12 +302,13 @@
     <script src="js/materialize.js"></script>
     <script src="js/sweetalert-dev.js"></script>
     <script src="js/knockout.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app-oop.js"></script>
     <script>
         $(document).ready(function() {
             $('.button-collapse').sideNav();
             $('.collapsible').collapsible();
-            resumeFetch('resume.json');
+            app.resume();
+            app.resume.fetch('resume.json');
         });
     </script>
 </body>

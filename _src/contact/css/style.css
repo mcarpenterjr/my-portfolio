@@ -1,0 +1,228 @@
+* {
+
+}
+
+.body{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical-middle{
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    color: #ababab;
+    font-family: Droid sans, sans-serif;
+}
+
+body {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    background-attachment: fixed;
+}
+em {
+    font-style: italic;
+    font-weight: 800;
+}
+
+.container {
+    margin-bottom: 30px;
+    max-width: 1024px;
+    width: 95%;
+    padding: 10px;
+
+}
+
+.header {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 2px;
+    border-bottom-style: outset;
+    border-color: #ababab;
+    max-width: 100%;
+}
+.brndimg {
+    height: 100%;
+    width: 87px;
+    float: left;
+    border-radius: 10px;
+    border: 2px;
+    border-style: inset;
+    border-color: #ababab;
+    overflow: hidden;
+}
+.namespace {
+    width: 100%;
+    float: right;
+    text-align: right;
+    padding-right: 25px;
+    line-height: 2px;
+}
+
+.namespace h1 {
+    color: #ffffff;
+    font-family: Bangers, sans-serif;
+    font-size: 64px;
+    font-weight: 100;
+    letter-spacing: 150%;
+    text-shadow: 1px 4px 6px #000000, 0 0 0 #000, 1px 4px 6px #000000;
+}
+
+.namespace h3 {
+    color: #ffffff;
+    font-family: Orbitron, sans-serif;
+    font-weight: 400;
+    text-shadow: 1px 4px 6px #634271, 0 0 0 #000, 1px 4px 6px #634271;
+}
+
+.content {
+    width: 100%;
+    padding-bottom: 10px;
+      
+}
+
+.content p {
+    text-align: justify;
+
+}
+
+.content p img {
+    height: 100%;
+    width: 275px;
+    border: 2px;
+    border-radius: 10px;
+    border-style: inset;
+    border-color: #ababab;
+    overflow: hidden;
+    margin-bottom: 10px;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.vertical-middle {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+.panel{
+
+}
+
+.panel.panel-default {
+    max-width: 625px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.message {
+    padding: 15px; 
+    margin: 0;
+}
+
+#examples {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+    height: auto;
+    border-top: 2px;
+    border-top-style: outset;
+    border-color: #ababab;
+}
+
+#examples h1 {
+    color: #ffffff;
+    font-family: Bangers, sans-serif;
+    font-size: 36px;
+    font-weight: 100;
+    letter-spacing: 150%;
+    text-shadow: 1px 4px 6px #000000, 0 0 0 #000, 1px 4px 6px #000000;
+}
+
+#examples h3 {
+    color: #ffffff;
+    font-family: Bangers, sans-serif;
+    font-size: 28px;
+    font-weight: 100;
+    letter-spacing: 180%;
+    text-shadow: 1px 4px 6px #000000, 0 0 0 #ababab, 1px 4px 6px #634271;
+}
+
+.example {
+    float: left;
+    margin-right: 10px;
+    width: calc((100% - 24px)/3);
+    
+}
+.example:last-of-type {
+    margin-right: 0;
+}
+
+.example img {
+    max-height: 100%;
+    max-width: 100%;
+    border: 2px;
+    border-radius: 10px;
+    border-style: inset;
+    border-color: #ababab;
+    overflow: hidden;
+    margin-bottom: 10px;
+    
+}
+
+#footer {
+    margin-bottom: 5px;
+    padding: 5px;
+    
+}
+
+.wrapper {
+    padding: 10px 0 0;
+    text-align: center;
+}
+
+.social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    line-height: 50px;
+    font-family: Entypo;
+    font-size: 28px;
+    text-align: center;
+    color: #555;
+    border-radius: 10px;
+    background: #eee;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.social {
+    box-shadow: 1px 4px 6px #634271, 0 0 0 #000, 1px 4px 6px #634271;
+    text-shadow: 1px 4px 6px #634271, 0 0 0 #000, 1px 4px 6px #634271;
+}
+
+.social a:link, .social a:visited, .social a:hover, .social a:active {
+    text-decoration: none;
+    color: #555;
+}
+/* 
+    Created on : Apr 3, 2015, 5:32:57 PM
+    Author     : Mark N Carpenter Jr
+*/
+

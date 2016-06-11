@@ -1,4 +1,4 @@
-<?php
+pu<?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'phpmailer/PHPMailerAutoload.php';
@@ -15,9 +15,17 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
     //create an instance of PHPMailer
     $mail = new PHPMailer();
 
-    $mail->From = $_POST['inputEmail'];
-    $mail->FromName = $_POST['inputName'];
-    $mail->AddAddress('reach@mncarpenter.mobi'); //recipient
+    //SMTP NoAuth Send function
+    $mail->isSMTP();
+    $mail->SMTPDebug = 0;
+    $mail->Host = "mail.mncarpenter.ninja";
+    $mail->Port = 25;
+    $mail->SMTPAuth = false;
+
+    //Setup Message
+    $mail->setFrom = $_POST['inputEmail', 'inputName'];
+    $mail->addReplyTo = $_POST['inputEmail', 'inputName'];
+    $mail->AddAddress('reach@mncarpenter.mobi', 'New Response'); //recipient
     $mail->Subject = $_POST['inputSubject'];
     $mail->Body = "Name: " . $_POST['inputName'] . "\r\n\r\nMessage: " . stripslashes($_POST['inputMessage']);
 

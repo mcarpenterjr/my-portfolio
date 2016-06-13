@@ -17,18 +17,18 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
     $mail = new PHPMailer();
 
     //SMTP With Auth Send function
-    $mail->isSMTP();
     $mail->SMTPDebug = 2;
-    $mail->Host = "mail.mncarpenter.ninja";
-    $mail->Port = 25;
+    $mail->isSMTP();
     $mail->SMTPAuth = true;
+    $mail->Port = 465;
+    $mail->Host = 'a2plcpnl0568.prod.iad2.secureserver.net ';
     $mail->Username = $constants['username']; // SMTP username
     $mail->Password = $constants['password']; // SMTP password
 
     //Setup Message`
     $mail->setFrom = $_POST['inputEmail'];
     $mail->addReplyTo = $_POST['inputEmail'];
-    $mail->AddAddress('reach@mncarpenter.mobi', 'New Response'); //recipient
+    $mail->AddAddress('reach@mncarpenter.ninja', 'New Response'); //recipient
     $mail->Subject = $_POST['inputSubject'];
     $mail->Body = "Name: " . $_POST['inputName'] . "\r\n\r\nMessage: " . stripslashes($_POST['inputMessage']);
 

@@ -17,14 +17,14 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
 
     //SMTP NoAuth Send function
     $mail->isSMTP();
-    $mail->SMTPDebug = 0;
+    $mail->SMTPDebug = 2;
     $mail->Host = "mail.mncarpenter.ninja";
     $mail->Port = 25;
     $mail->SMTPAuth = false;
 
     //Setup Message
-    $mail->setFrom = $_POST['inputEmail', 'inputName'];
-    $mail->addReplyTo = $_POST['inputEmail', 'inputName'];
+    $mail->setFrom = $_POST['inputEmail'];
+    $mail->addReplyTo = $_POST['inputEmail'];
     $mail->AddAddress('reach@mncarpenter.mobi', 'New Response'); //recipient
     $mail->Subject = $_POST['inputSubject'];
     $mail->Body = "Name: " . $_POST['inputName'] . "\r\n\r\nMessage: " . stripslashes($_POST['inputMessage']);

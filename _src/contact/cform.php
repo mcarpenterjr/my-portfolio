@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require_once 'phpmailer/PHPMailerAutoload.php';
+$constants = parse_ini_file('/home/mcarpenterjr/configs/portfolio_config.ini');
 
 if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['inputSubject']) && isset($_POST['inputMessage'])) {
 
@@ -15,14 +16,16 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
     //create an instance of PHPMailer
     $mail = new PHPMailer();
 
-    //SMTP NoAuth Send function
+    //SMTP With Auth Send function
     $mail->isSMTP();
     $mail->SMTPDebug = 2;
     $mail->Host = "mail.mncarpenter.ninja";
     $mail->Port = 25;
-    $mail->SMTPAuth = false;
+    $mail->SMTPAuth = true;
+    $mail->Username = $constants['username']; // SMTP username
+    $mail->Password = $constants['password']; // SMTP password
 
-    //Setup Message
+    //Setup Message`
     $mail->setFrom = $_POST['inputEmail'];
     $mail->addReplyTo = $_POST['inputEmail'];
     $mail->AddAddress('reach@mncarpenter.mobi', 'New Response'); //recipient

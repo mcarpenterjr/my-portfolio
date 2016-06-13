@@ -1,3 +1,6 @@
+# Configuration Details
+portfolio_config.ini
+
 # Package Management
 node_modules/
 bower_components/

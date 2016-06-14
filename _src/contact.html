@@ -1,82 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Get In Touch With Mark</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="contact/css/style.css">
-    <link href='http://weloveiconfonts.com/api/?family=entypo' rel='stylesheet' type='text/css'>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
-    <script src="contact/app.js"></script>
-    <script src="contact/controllers.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Mark N Carpenter Jr (Freelance Frontend Ninja)">
+
+  <title>Mark N Carpenter Jr, Frontend Developer</title>
+
+  <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/sweetalert.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="fonts/font-awesome-4.6.2/css/font-awesome.min.css">
+
+  <!-- Fonts -->
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Oswald'>
+
+  <!-- Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+  <script src="contact/contact_app.js"></script>
+  <script src="contact/controllers.js"></script>
 </head>
-<body ng-app="contactApp" >
-    <div class="vertical-middle">
-        <div class="container">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Reach Out To Mark</h2>
-                </div>
-                <div ng-controller="ContactController" class="panel-body">
-                    <form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
-                        <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
-                            <label for="inputName" class="col-lg-2 control-label">Name</label>
-                            <div class="col-lg-10">
-                                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
-                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-                            <div class="col-lg-10">
-                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
-                            <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
-                            <div class="col-lg-10">
-                                <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
-                            <label for="inputMessage" class="col-lg-2 control-label">Message</label>
-                            <div class="col-lg-10">
-                                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
-                                <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">
-                                    Send Message
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
-                </div>
+
+<body class="grey lighten-4" ng-app="contactApp">
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper indigo z-depth-2">
+        <a href="#!" class="brand-logo">Personal Resume</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="fa fa-bars fa-fw"></i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.email }" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+          </li>
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.mobile }" target="_blank"><i class="fa fa-phone-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.github }" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+          </li>
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.linkedin }" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.twitter }" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+          </li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.email }" target="_blank"><i class="fa fa-envelope fa-2x"></i> Email</a>
+          </li>
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.mobile }" target="_blank"><i class="fa fa-phone-square fa-2x"></i> Phone</a>
+          </li>
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.github }" target="_blank"><i class="fa fa-github fa-2x"></i> github</a>
+          </li>
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.linkedin }" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i> LinkedIn</a>
+          </li>
+          <li>
+            <a data-bind="attr: { href: resumeData.bio.contacts.twitter }" target="_blank"><i class="fa fa-twitter-square fa-2x"></i> Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="card" ng-controller="ContactController">
+      <div class="card-content">
+        <span class="card-title">Reach Out To Mark</span>
+
+        <form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
+          <!-- Name Field -->
+          <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+            <label for="inputName" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+              <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
             </div>
-        </div>
+          </div>
+          <!-- Email Field -->
+          <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+              <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+            </div>
+          </div>
+          <!-- Subject Field -->
+          <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+            <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
+            <div class="col-lg-10">
+              <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
+            </div>
+          </div>
+          <!-- Message Area -->
+          <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+            <label for="inputMessage" class="col-lg-2 control-label">Message</label>
+            <div class="col-lg-10">
+              <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+            </div>
+          </div>
+          <!-- Submit Button -->
+          <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+              <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">
+                Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+        <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+      </div>
     </div>
-        <div id="footer">
-            <div class="wrapper">
-                <div class="social">
-                    <a href="http://www.facebook.com/mcarpenterjr"
-                       target="_blank">&#62220;</a>
-                </div>
-                <div class="social">
-                    <a href="https://twitter.com/xXSirenSxOpusXx"
-                       target="_blank">&#62217;</a>
-                </div>
-                <div class="social">
-                    <a href="https://plus.google.com/115187923991364057968/posts"
-                       target="_blank">&#62223;</a>
-                </div>
-                <div class="social">
-                    <a href="https://www.linkedin.com/pub/mark-carpenter-jr/37/12b/b45"
-                       target="_blank">&#62232;</a>
-                </div>
-            </div>
-        </div>
+  </div>
+  <footer>
+
+</footer>
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="js/materialize.js"></script>
+<script src="js/sweetalert-dev.js"></script>
+<script src="js/app.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.button-collapse').sideNav();
+        $('.collapsible').collapsible();
+        resumeFetch('resume.json');
+    });
+</script>
 </body>
+
 </html>

@@ -26,9 +26,9 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
     $mail->Password = $constants['password']; // SMTP password
 
     //Setup Message`
-    $mail->setFrom = $_POST['inputEmail'];
+    $mail->setFrom = $constants['username'];
     $mail->addReplyTo = $_POST['inputEmail'];
-    $mail->AddAddress('reach@mncarpenter.ninja', 'New Response'); //recipient
+    $mail->AddAddress('mark@mncarpenter.ninja', 'New Response'); //recipient
     $mail->Subject = $_POST['inputSubject'];
     $mail->Body = "Name: " . $_POST['inputName'] . "\r\n\r\nMessage: " . stripslashes($_POST['inputMessage']);
 

@@ -1,6 +1,9 @@
 # Configuration Details
 portfolio_config.ini
 
+# To protect passwords and ftp information
+gulpfile.js
+
 # Package Management
 node_modules/
 bower_components/

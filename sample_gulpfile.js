@@ -35,9 +35,9 @@ gulp.task('serve', function() {
 gulp.task( 'deploy', function () {
 
 	var conn = ftp.create( {
-		host:     'mncarpenter.ninja',
-		user:     'portfolio@mncarpenter.ninja',
-		password: '03$T,3bl,wM.',
+		host:     'your.host',
+		user:     'login@your.host',
+		password: 'YourPassword',
 		parallel: 10,
 		log:      gutil.log
 	} );
@@ -52,6 +52,7 @@ gulp.task( 'deploy', function () {
 	];
 
 	// using base = '.' will transfer everything to /public_html correctly
+  // We work from a _src directory
 	// turn off buffering in gulp.src for best performance
 
 	return gulp.src( globs, { base: './_src', buffer: false } )

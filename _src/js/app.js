@@ -110,10 +110,10 @@ function resumeBuilder() {
         console.log('Resume Data:', result);
       },
       error: function(result) {
-        Materialize.toast('Trouble Retreiving Resume Data...', 6500);
+        Materialize.toast('Trouble Retreiving Data...', 6500);
       }
     }).done(function() {
-      Materialize.toast('Successfully Loaded Resume Data', 6500);
+      Materialize.toast('Successfully Loaded Data', 6500);
     });
   };
 

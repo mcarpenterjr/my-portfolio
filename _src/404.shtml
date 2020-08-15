@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Not Found</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      body {
+        background-color: black;
+      }
+
+      body, h1, p {
+        font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      /* Style the video: 100% width and height to cover the entire window */
+      #Video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+      /* Add some content at the bottom of the video/page */
+      .content {
+        position: fixed;
+        top: 15%;
+        left: 10%;
+        background: rgba(0, 0, 0, 0.50);
+        color: #f1f1f1;
+        width: 20%;
+        padding: 10px;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+      <video autoplay muted loop id="Video">
+        <source src="./img/404.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="content">
+      <h1>404</h1>
+      <p>Things just aren't going your way...</p>
+      <p>Try using the back button, or the key combo:</p>
+      <pre>"ALT + LEFT ARROW"</pre>
+    </div>
+  </body>
+</html>

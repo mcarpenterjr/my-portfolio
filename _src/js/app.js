@@ -151,5 +151,11 @@ function contact() {
   });
 }
 
+$('document').ready(() => {
+  $('body nav-bar').load('partials/nav.html')
+  $('body slider-full').load('partials/slider.html', () => $('.slider').slider());
+  $('body floaters').load('partials/floaters.html')
+});
+
 var resumeBuilder = new resumeBuilder();
 ko.applyBindings(resumeBuilder);

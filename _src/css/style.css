@@ -41,10 +41,10 @@ main {
 }
 .status-box {
     margin: 0;
-    padding: 5px;
+    padding: 7px 35px;
     overflow: hidden;
     border-radius: 7px;
-    box-shadow: 2px 2px 4px #000000;
+    box-shadow: 3px 3px 10px #000000;
 }
 .status-box .fa-check {
     color: #1de9b6;
@@ -54,7 +54,7 @@ main {
     font-family: 'Oswald', sans-serif;
     font-size: 2em;
     color: #ffffff;
-    text-shadow: 1px 1px 2px #000000;
+    text-shadow: 2px 2px 3px #000000;
 }
 .name {
     font-family: 'keepCalm', sans-serif;

@@ -1,49 +1,15 @@
-{
-    "bio": {
-        "name":  {
-          "first": "Mark",
-          "last": "Carpenter",
-          "middle": "N",
-          "suffix": "Jr"
-        },
-        "locations": {
-          "home": {
-            "city": "Newtown",
-            "state": "CT",
-            "zip": "06470"
-          },
-          "alt": {
-            "city": "West Dover",
-            "state": "VT",
-            "zip": "05356"
-          }
-        },
-        "roles": [
-          "Software Engineer",
-          "Open Source Contributor",
-          "Business Consultant"
-        ],
-        "socials": {
-            "mobile": "(203)816-5206",
-            "email": "marksthings24@gmail.com",
-            "github": "mcarpenterjr",
-            "linkedin": "mcarpenterjr",
-            "twitter": "beardySmeardy",
-            "instagram": "beardysmeardy"
-        },
-        "bioPic": "img/mncheadshot.jpg",
-        "welcomeMessage": "With strong problem solving skills, the ability to adapt, and capability to quickly learn new tasks, I know I will become a vital asset to almost any team. ",
-        "skills": ["HTML", "CSS", "JavaScript", "Jquery", "Bootstrap", "CMS", "Netbeans",
-            "Git", "GitHub", "MySql", "iOS", "Windows", "CLI", "PhotoShop", "Fireworks",
-            "Premier Pro", "Illustrator", "DreamWeaver", "Joomla", "WordPress", "MVC",
-            "CodeIgniter"
-        ]
-    },
+{    
+    "welcomeMessage": "With strong problem solving skills, the ability to adapt, and capability to quickly learn new tasks, I know I will become a vital asset to almost any team. ",
+    "skills": ["HTML", "CSS", "JavaScript", "Jquery", "Bootstrap", "CMS", "Netbeans",
+        "Git", "GitHub", "MySql", "iOS", "Windows", "CLI", "PhotoShop", "Fireworks",
+        "Premier Pro", "Illustrator", "DreamWeaver", "Joomla", "WordPress", "MVC",
+        "CodeIgniter"
+    ],
     "work": {
         "jobs": [{
             "employer": "G. P. Tool Co.",
             "title": "CNC Machinist",
-            "dates": "2014 - Current",
+            "dates": "2014 - 2016",
             "location": "Danbury, CT",
             "description": "Producing machined parts for the Aerospace, Medical, and Energy Generation industries. Works from supplied blueprints and drawings to create excellent qaulity parts per customer specifications. Keeps a clean and safe work area along with routine equipment maintinence and quality checks. Works closely with Quality Control to meet Zero-Loss Certified Material requirements.",
             "duties": [

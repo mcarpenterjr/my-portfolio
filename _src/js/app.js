@@ -1,7 +1,51 @@
-class NavBar {
+class App {
+  constructor() {
+    let self = this;
+
+  }
+
+  /**
+   * Wrapper for the jQ ajax method so we can reuse throughout our classes
+   * 
+   * @param string url is required.
+   * @param array  opts is not required defaults to an empty arrary.
+   * @param string method is the request method, POST or GET but regex checking
+   *               will look for other parts of the CRUD model.
+  */  
+  fetchData(url, opts = [], method = 'GET') {
+    let request;
+
+    const regex = RegExp('/[GETPOSDL]{3,}/g');
+    method = regex.test(method)
+      ? method.toUpperCase() : 'GET';
+    
+    // We made a convention for the options/params array but haven't done
+    // anything to implement it yet.
+    for (let idx = 0; idx < opts.length; idx++) {
+      const option = opts[idx];
+      
+    }
+
+    if (typeof url !== 'undefined') {
+      request = $.ajax({
+        url: url,
+        type: method,
+        dataType: 'JSON'
+      });
+    } else {
+      request = 'Request location required!';
+    }
+
+    return request;
+  }
+}
+
+class NavBar extends App {
   constructor(data) {
+    super(data);
     let self = this;
    
+    self.init();
     // self.socials = [];
     // for (let i = 0; i < navData.socials.length; i++) {
     //   const social = navData.socials[i];
@@ -10,14 +54,84 @@ class NavBar {
   }
 
   init() {
+    let self = this;
+    let goto;
     // Load material tooltips
     $('nav .tooltipped').tooltip();
     // do some jq majick for link clicks
     $('nav a').click((e) => {
-      e.preventDefault();
-      console.log(e.currentTarget);
+      if (goto = $(e.currentTarget).attr('id')) {
+        e.preventDefault();
+        self.loadLink(goto);
+      }
     });
   }
+
+  loadLink(link) {
+    let self = this;
+    if (link == 'resume') {
+      $('body content').load('partials/resume.html');
+      self.resume = new Resume;
+    }
+    // self.fetchData('data/about.json').done((a) => { console.log(a) });
+    $('body footer').load('partials/footer.html');
+
+  }
+
+};
+
+class Resume extends App {
+  constructor(data) {
+    super(data);
+    let self = this;
+    let resData = {
+      'welcomeMessage': ko.observable(''),
+      'skills': ko.observableArray(''),
+      'work': {
+        'jobs': ko.observableArray(''),
+      },
+      'education': {
+        'schools': ko.observableArray(''),
+        'onlineCourses': ko.observableArray(''),
+      },
+      'projects': {
+        'projects': ko.observableArray(''),
+      },
+      'isReady': ko.observable(false)
+    };
+      
+    
+    self.fetchData('data/resume.json').done((data) => {
+      console.log(data);
+      resData.welcomeMessage(data.welcomeMessage);
+      for (let i = 0; i < data.skills.length; i++) {
+        const skill = data.skills[i];
+        resData.skills.push(skill);
+      }
+
+      for (let widx = 0; widx < data.work.jobs.length; widx++) {
+        const job = data.work.jobs[widx];
+        let duties = ko.observableArray();
+        for (var didx = 0; didx < job.duties.length; didx++) {
+          const duty = job.duties[didx];
+          duties.push(duty);
+        }
+        resData.work.jobs.push({
+          employer: ko.observable(job.employer),
+          title: ko.observable(job.title),
+          dates: ko.observable(job.dates),
+          location: ko.observable(job.location),
+          description: ko.observable(job.description),
+          duties: duties
+        });
+        
+      }
+      console.log(resData.work.jobs());
+    }).then(() => {
+      ko.applyBindings(resData)
+    });
+  }
+
 };
 
 
@@ -179,7 +293,6 @@ $('document').ready(() => {
     (response, status, obj) => {
       // We could use the callback data for something.
       const navbar = new NavBar();
-      navbar.init();
     }
   );
   $('body content slider-full').load(
@@ -189,5 +302,5 @@ $('document').ready(() => {
   $('body content floaters').load('partials/floaters.html');
 });
 
-var resumeBuilder = new resumeBuilder();
-ko.applyBindings(resumeBuilder);
+// var resumeBuilder = new resumeBuilder();
+// ko.applyBindings(resumeBuilder);

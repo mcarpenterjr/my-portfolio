@@ -1,14 +1,35 @@
 {
     "bio": {
-        "name": "Mark N Carpenter Jr",
-        "role": "Front-End Web Developer",
-        "contacts": {
+        "name":  {
+          "first": "Mark",
+          "last": "Carpenter",
+          "middle": "N",
+          "suffix": "Jr"
+        },
+        "locations": {
+          "home": {
+            "city": "Newtown",
+            "state": "CT",
+            "zip": "06470"
+          },
+          "alt": {
+            "city": "West Dover",
+            "state": "VT",
+            "zip": "05356"
+          }
+        },
+        "roles": [
+          "Software Engineer",
+          "Open Source Contributor",
+          "Business Consultant"
+        ],
+        "socials": {
             "mobile": "(203)816-5206",
             "email": "marksthings24@gmail.com",
             "github": "mcarpenterjr",
             "linkedin": "mcarpenterjr",
-            "twitter": "BeardySmeardy",
-            "location": "Newtown, CT"
+            "twitter": "beardySmeardy",
+            "instagram": "beardysmeardy"
         },
         "bioPic": "img/mncheadshot.jpg",
         "welcomeMessage": "With strong problem solving skills, the ability to adapt, and capability to quickly learn new tasks, I know I will become a vital asset to almost any team. ",

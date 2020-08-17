@@ -1,3 +1,26 @@
+class NavBar {
+  constructor(data) {
+    let self = this;
+   
+    // self.socials = [];
+    // for (let i = 0; i < navData.socials.length; i++) {
+    //   const social = navData.socials[i];
+    //   self.social.push(social);
+    // }
+  }
+
+  init() {
+    // Load material tooltips
+    $('nav .tooltipped').tooltip();
+    // do some jq majick for link clicks
+    $('nav a').click((e) => {
+      e.preventDefault();
+      console.log(e.currentTarget);
+    });
+  }
+};
+
+
 function resumeBuilder() {
   resumeData = {
     'bio': {
@@ -152,9 +175,18 @@ function contact() {
 }
 
 $('document').ready(() => {
-  $('body nav-bar').load('partials/nav.html')
-  $('body slider-full').load('partials/slider.html', () => $('.slider').slider());
-  $('body floaters').load('partials/floaters.html')
+  $('body nav-bar').load('partials/nav.html',
+    (response, status, obj) => {
+      // We could use the callback data for something.
+      const navbar = new NavBar();
+      navbar.init();
+    }
+  );
+  $('body content slider-full').load(
+    'partials/slider.html',
+    () => $('.slider').slider()
+  );
+  $('body content floaters').load('partials/floaters.html');
 });
 
 var resumeBuilder = new resumeBuilder();
